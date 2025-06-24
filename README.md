@@ -16,7 +16,7 @@ This guide explains how to deploy the OpenTelemetry Collector (contrib version) 
 ## Steps
 
 ### 1. Place Files
-Copy `deploy_otel_collector.sh` and your `config.yaml` (or `otel-collector-config.yaml`) into the same directory on your RHEL machine.
+Copy `deploy_otel_collector.sh` and your `config.yaml` into the same directory on your RHEL machine.
 
 ### 2. Make the Script Executable
 ```

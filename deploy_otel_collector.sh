@@ -1,11 +1,11 @@
-#!/bin/zsh
+#!/bin/bash
 # deploy_otel_collector.sh
 # Deploy OpenTelemetry Collector using Podman with config from local YAML
 
 set -euo pipefail
 
 # Name of the config file (must be in the same directory as this script)
-CONFIG_FILE="otel-collector-config.yaml"
+CONFIG_FILE="config.yaml"
 
 # Name for the Podman container
 CONTAINER_NAME="otel-collector"
