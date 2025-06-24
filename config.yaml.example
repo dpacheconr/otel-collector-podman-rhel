@@ -1,0 +1,23 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+  solace:
+    broker: "tcp://localhost:55555"
+    username: "solace_user"
+    password: "solace_password"
+    queue: "otel-queue"
+    # Add other options as required by your Solace setup
+
+exporters:
+  otlphttp/newrelic:
+    endpoint: https://otlp.nr-data.net:4318/v1/traces
+    headers:
+      api-key: "<YOUR_NEW_RELIC_LICENSE_KEY>"
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp, solace]
+      exporters: [otlphttp/newrelic]
