@@ -11,6 +11,7 @@ This guide explains how to deploy the OpenTelemetry Collector (contrib version) 
 ## Files
 - `deploy_otel_collector.sh`: Shell script to deploy the collector
 - `config.yaml`: OpenTelemetry Collector configuration (edit as needed)
+- `config.yaml.example`: Example configuration file. Copy this to `config.yaml` and update with your own values before deploying.
 
 ## Steps
 
@@ -23,6 +24,10 @@ chmod +x deploy_otel_collector.sh
 ```
 
 ### 3. Edit the Configuration
+- Copy `config.yaml.example` to `config.yaml`:
+  ```
+  cp config.yaml.example config.yaml
+  ```
 - Update `config.yaml` with your Solace and New Relic details.
 - Ensure your New Relic license key is set in the exporter section.
 
