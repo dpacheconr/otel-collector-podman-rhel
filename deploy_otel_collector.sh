@@ -31,7 +31,7 @@ fi
 # Run the OpenTelemetry Collector
 podman run -d \
   --name "$CONTAINER_NAME" \
-  -v "$SCRIPT_DIR/$CONFIG_FILE:/etc/otelcol/config.yaml:ro" \
+  -v "$SCRIPT_DIR/$CONFIG_FILE:/etc/otelcol/config.yaml:ro,z" \
   -p 4317:4317 \
   -p 4318:4318 \
   "$OTEL_IMAGE" \
